@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SearchBarTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oA0-0e-G3M">
+                                <rect key="frame" x="50" y="197" width="275" height="274"/>
+                                <state key="normal" backgroundImage="Plus"/>
+                                <connections>
+                                    <action selector="pushButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D37-v6-ybp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9P-ea-8xx">
+                                <rect key="frame" x="10" y="32" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5N9-C8-uBU"/>
+                                    <constraint firstAttribute="width" constant="30" id="euQ-lw-Ivi"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="BackButton"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7v4-Lc-U0b"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PushButtonHeader" translatesAutoresizingMaskIntoConstraints="NO" id="Og1-vh-3R4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ryg-BS-Jub">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="rqz-8v-K6W" detailTextLabel="ore-lu-Ght" style="IBUITableViewCellStyleSubtitle" id="g5W-iX-szw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g5W-iX-szw" id="KGu-iE-eOw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqz-8v-K6W">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ore-lu-Ght">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ryg-BS-Jub" firstAttribute="top" secondItem="Og1-vh-3R4" secondAttribute="bottom" id="9ze-Bw-tXO"/>
+                            <constraint firstItem="oA0-0e-G3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FgJ-k3-lWr"/>
+                            <constraint firstItem="Ryg-BS-Jub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G5f-GT-yTR"/>
+                            <constraint firstItem="Og1-vh-3R4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nf3-Ct-Yte"/>
+                            <constraint firstAttribute="trailing" secondItem="Ryg-BS-Jub" secondAttribute="trailing" id="OAa-bJ-gbw"/>
+                            <constraint firstItem="Ryg-BS-Jub" firstAttribute="top" secondItem="o9P-ea-8xx" secondAttribute="bottom" constant="8" id="OE2-UM-WbO"/>
+                            <constraint firstItem="Og1-vh-3R4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UPH-Nk-4Xh"/>
+                            <constraint firstItem="oA0-0e-G3M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bPE-6N-WCs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ryg-BS-Jub" secondAttribute="bottom" id="ci0-7V-G0t"/>
+                            <constraint firstAttribute="trailing" secondItem="Og1-vh-3R4" secondAttribute="trailing" id="d8l-Bp-lR6"/>
+                            <constraint firstItem="o9P-ea-8xx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="eyh-aR-Qiw"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backButton" destination="o9P-ea-8xx" id="uPQ-MS-v9R"/>
+                        <outlet property="header" destination="Og1-vh-3R4" id="BpO-e7-bxV"/>
+                        <outlet property="pushButton" destination="oA0-0e-G3M" id="Hpt-Bf-poB"/>
+                        <outlet property="searchDisplayController" destination="bpJ-s5-zKk" id="MiR-DZ-6t8"/>
+                        <outlet property="searchResultsTableView" destination="Ryg-BS-Jub" id="01f-xb-Ctf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bpJ-s5-zKk">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="C4L-0W-6Al"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="VI5-FZ-3MI"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="ANj-Cv-X9N"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="eka-Dz-YyP"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-61.5" y="474.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackButton" width="30" height="30"/>
+        <image name="Plus" width="275" height="274"/>
+        <image name="PushButtonHeader" width="375" height="70"/>
+    </resources>
+</document>
